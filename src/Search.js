@@ -5,9 +5,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const Search = ({ results, onChange, value, onSelect, renderItem }) => {
 
     const [focusedIndex, setFocusedIndex] = useState(-1);
-    const resultContainer = useRef(null);
     const [showResults, setShowResults] = useState(false);
     const [defaultValue, setDefaultValue] = useState("");
+    const resultContainer = useRef(null);
 
 
     const handleSelection = (selectedIndex) => {
@@ -70,8 +70,6 @@ const Search = ({ results, onChange, value, onSelect, renderItem }) => {
 
     useEffect(() => {
         if (results.length > 0 && !showResults) setShowResults(true);
-
-        // if (results.length <= 0) setShowResults(false);
     }, [results]);
 
     useEffect(() => {

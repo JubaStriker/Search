@@ -5,8 +5,6 @@ import Card from "./Card";
 
 function App() {
 
-  // const [results, setResults] = useState();
-
   const [searchField, setSearchField] = useState("")
   const [selectedProfile, setSelectedProfile] = useState();
 
@@ -33,7 +31,6 @@ function App() {
     );
   }
 
-  console.log(results)
 
   const handleChange = (e) => {
     setSearchField(e.target.value);
@@ -46,7 +43,6 @@ function App() {
       value={selectedProfile?.name}
       onSelect={(item) => setSelectedProfile(item)}
       renderItem={(item) => <Card item={item}></Card>}>
-
     </Search>
   );
 }
